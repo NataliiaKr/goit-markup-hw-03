@@ -48,6 +48,9 @@ display: block;
 
 .container {
   width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
   }
 
 
@@ -62,8 +65,6 @@ display: block;
 .header-container {
   display: flex;
   align-items: center;
-  width: 1200px;
-  
   border-bottom: 1px solid #ECECEC ;
 }
 
@@ -151,13 +152,11 @@ display: block;
 }
 
 /* Герой-заголовок */
-.hero-container {
-display: flex;
-flex-direction: column;
-align-items: center;
+.hero-section {
 padding-top: 200px;
 padding-bottom: 280px;
 background-color: var(--second-background-color);
+text-align: center;
 }
 
 .hero-title {
@@ -167,7 +166,7 @@ background-color: var(--second-background-color);
   letter-spacing: 0.06em;
   color: var(--second-text-color);
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
   width: 696px;
   text-align: center;
 }
@@ -184,7 +183,6 @@ background-color: var(--second-background-color);
   width: 218px;
   min-height: 50px;
   padding: 10px 32px;
-  
   background-color: var(--accent-bg-color);
   color: var(--second-text-color);
   
@@ -205,54 +203,49 @@ background-color: var(--second-background-color);
   line-height: calc(42 / 36);
   color: var(--title-text-color);
   text-align: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 /* розділ Особливості */
+
+.feature-section {
+padding-top: 94px;
+padding-bottom: 94px;
+}
+
+.feature-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
 .feature-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
   color: var(--title-text-color);
   text-transform: uppercase;
-  
   margin-bottom: 10px;
 }
-.feature-container {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  
-}
-
-.item-feature {
-  margin-top: 94px;
-  margin-bottom: 94px;
-}
-
 
 /* секція " Чим ми займаємося" */
 
-.work-container {
+.work-section {
   padding-bottom: 94px;
 }
 .work {
   display: flex;
   align-items: center;
   gap: 30px;
-  justify-content: center;
+  
 }
 
 
 /* ceкція Наша команда */
 .team {
   background-color: var(--team-background);
-  width: 1200px;
   font-size: 16px;
   line-height: calc(19 / 16);
-}
-
-.team-container{
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -261,7 +254,6 @@ background-color: var(--second-background-color);
 display: flex;
 align-items: center;
 gap: 30px;
-justify-content: center;
 }
 
 .team-card {
@@ -284,10 +276,19 @@ justify-content: center;
 }
 
 /* Footer */
-.footer-container {
+.footer-section {
   background-color: var(--second-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+address {
+margin-top: 20px;
+}
+
+.contacts-footer {
+display: block;
+margin-top: 9px;
 }
 
 /* Посилання в футері */
@@ -295,17 +296,13 @@ justify-content: center;
   font-style: normal;
   color: var(--second-text-color);
   text-decoration: none;
-  display: block;
-  margin-top: 20px;
-}
+  }
 
 .link-contacts {
   font-style: normal;
   color: var(--footer-transparent-color);
   text-decoration: none;
-  display: block;
-  margin-top: 9px;
-}
+  }
 
 .link-address:hover,
 .link-address:focus,
@@ -314,23 +311,24 @@ justify-content: center;
   color: var(--accent-text-color);
 }
 
+
 /* Портфоліо */
+.portfolio-section {
+padding-top: 94px;
+padding-bottom: 94px;
+}
 .portfolio-container {
-  width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 94px;
-  padding-bottom: 94px;
 
-}
+  }
 
 /* Кнопки фільтра в портфоліо */
 .filter-box {
 display: flex;
 align-items: center;
-padding-bottom: 16px;
-margin-bottom: 34px;
+margin: 0 auto 50px;
 }
 
 .item-filter {
@@ -370,16 +368,18 @@ margin-bottom: 34px;
 }
 
 /* Проекти в портфоліо */
+
+
 .projects-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
-  
+   
 }
 
-.item-projects{
+.about-project {
   border: 1px solid #EEEEEE;
+  padding: 20px 24px;
 }
 .project-title {
   font-weight: 700;
@@ -387,15 +387,14 @@ margin-bottom: 34px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
-  margin: 20px 24px 4px 24px;
+  margin-bottom: 8px;
 }
 
 .project-subtitle {
   font-size: 16px;
   line-height: calc(30 / 16);
   color: var(--primary-text-color);
-  margin: 4px 24px 20px 24px;
-}
+  }
 
 .link-project{
   text-decoration: none;
@@ -406,24 +405,3 @@ margin-bottom: 34px;
   background-color: var(--accent-bg-color)
 }
 
-.footer-container {
-  background-color: var(--second-background-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.link-address {
-  display: block;
-  margin-top: 20px;
-}
-
-.link-contacts {
-  display: block;
-  margin-top: 9px;
-}
-
-.logo,
-.link-address,
-.link-contacts {
-  margin-left: 15px;
-}
